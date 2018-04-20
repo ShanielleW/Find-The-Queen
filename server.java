@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 class server{
   public static void main(String[] args){
@@ -39,10 +40,26 @@ class server{
         dealerOut = new PrintWriter(player1.getOutputStream(),true);
         spotterOut = new PrintWriter(player2.getOutputStream(),true);
 
-        dealerOut.println("You are the dealer for this round");
+        
+		int randomNum = TreadLocalRandom.current().nextInt(1,3);
+		dealerOut.println("You are the dealer for this round");
         spotterOut.println("You are the spotter for this round");
       }catch(IOException e){
 
       }
+   
+  
+    int randomNum = TreadLocalRandom.current().nextInt(1,3);
+	if (randomNum=1){
+		Dealer player1dealer=new Dealer("dannyboi","dre@margh_shelled");
+		Spotter player2spotter= new Spotter("matty7","win&win99");
+	}
+	else{
+		Spotter player2dealer=new Spotter("dannyboi","dre@margh_shelled");
+		Dealer player1dealer= new Dealer("matty7","win&win99");
+	}
+	
+	
+  
   }
 }

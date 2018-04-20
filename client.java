@@ -1,6 +1,54 @@
 import java.net.*;
 import java.io.*;
 
+class Person{
+	
+	
+	protected int position;
+	protected int points;
+	
+	
+	Person(String name, String password){
+		this.name=name;
+		this.password=password;
+	}
+	
+	public String getpassword(){
+		return password;
+	}
+	
+	public String getname(){
+		return name;
+	}
+	
+}
+
+public class Spotter extends Person{
+	
+	public void pick(){
+		System.out.println("Please enter the position you think the Queen is");
+	}
+	
+}
+
+public class Dealer extends Person{
+	
+	public void setPosition(int position){
+		super.position=position;
+	}
+	
+	public int getposition(){
+		return position
+	}
+	
+}
+
+
+
+
+
+
+
 public class LogIn{
   /*private String uname1 = "dannyboi";
   private String uname2 = "matty7";
